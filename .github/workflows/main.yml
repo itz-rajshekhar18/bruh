@@ -1,0 +1,17 @@
+name: Echo Workflow
+
+on:  
+  push:  
+    branches:  
+      - main  # Runs only on pushes to the main branch  
+
+jobs:  
+  echo_job:  
+    runs-on: ubuntu-latest  
+
+    steps:  
+      - name: Checkout repository  
+        uses: actions/checkout@v4  
+
+      - name: Echo a message  
+        run: echo "Hello, GitHub Actions!"
